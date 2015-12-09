@@ -1,0 +1,13 @@
+*, 
+body,
+html,
+div,
+nav,
+section,
+input,
+button,
+form {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}

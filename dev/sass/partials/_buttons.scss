@@ -1,0 +1,44 @@
+.button {
+	cursor: pointer;
+	font-weight: $thin;
+	background-color: $white;
+	border-radius: 1rem;
+	padding: .3rem 1rem .4rem;
+	transition: background-color 400ms ease;
+}
+.primary {
+	@extend .button;
+	color: $secondary-color;
+	background-color: $primary-color;
+}
+.primary:hover {
+	@extend .button;
+	background-color: darken($primary-color, 10%)
+}
+.secondary {
+	@extend .button;
+	color: $primary-color;
+	background-color: $secondary-color;
+}
+.secondary:hover {
+	@extend .button;
+	background-color: darken($secondary-color, 10%)
+}
+.transparent {
+	@extend .button;
+	color: $primary-color;
+	background-color: transparent;
+}
+.transparent:hover {
+	@extend .button;
+	background-color: $secondary-color;
+}
+.inverted {
+	@extend .button;
+	color: $primary-color;
+	background-color: $white;
+}
+.inverted:hover {
+	@extend .button;
+	background-color: darken($white, 10%)
+}

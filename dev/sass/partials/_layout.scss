@@ -1,0 +1,49 @@
+#main {
+	.full-width {
+		width: 100%;
+		@include float(left);
+		clear: both;
+	}
+	.wrapper {
+		display: block;
+		margin: 0 auto;
+		padding: 0 $base-gutter
+	}
+	.pad-section {
+		padding-top: $large-gutter;
+	}
+	@media(max-width:$breakpoint-phone) {
+		.wrapper {
+			width: $breakpoint-phone - 50px;
+		}
+	}
+	@media (min-width:$breakpoint-tablet) {
+		.wrapper {
+			width: $breakpoint-tablet - 50px;
+		}
+	}
+	@media (min-width:$breakpoint-desktop) {
+		.wrapper {
+			width: $breakpoint-desktop - 50px;
+		}
+	}
+	@media (min-width:$breakpoint-desktop-xl) {
+		.wrapper {
+			width: $breakpoint-desktop-xl - 50px;
+		}
+	}
+	.float-left {
+		@include float(left);
+	}
+	.float-right {
+		@include float(right);
+	}
+	hr {
+		width: 100%;
+		height: 1px;
+		border: none;
+		outline: none;
+		padding-top: $large-gutter;
+		border-bottom: 1px solid $secondary-color;
+	}
+}

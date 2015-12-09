@@ -1,0 +1,7 @@
+@mixin background($src,$position:center top,$size:auto,$color:transparent) {
+	background-image:url($src);
+	background-position: $position;
+	background-size: $size;
+	background-repeat: no-repeat;
+	background-color: $color;
+}

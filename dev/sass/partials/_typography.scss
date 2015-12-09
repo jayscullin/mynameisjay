@@ -1,0 +1,44 @@
+body {
+	font-family: $base-font;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $dark-gray;
+	font-weight: $thin;
+	line-height: $base-line-height;
+}
+h1 {
+	font-size: $large-font-size*2;
+}
+h2 {
+	font-size: $large-font-size;
+	padding-bottom: $small-gutter;
+}
+h3 {
+	font-size: $base-font-size*1.7;
+	margin-bottom: $small-gutter;
+}
+p {
+	color: $gray;
+	font-weight: $thin;
+	font-size: $base-font-size;
+	line-height: $base-line-height/1.2;
+	margin-bottom: $base-gutter/1.2;
+	a {
+		color: $primary-color;
+		background-color: lighten($secondary-color, 3%);
+		border-radius: .3rem;
+		padding: .15rem .3rem;
+		transition: background-color 300ms ease;
+	}
+	a:hover {
+		background-color: $secondary-color;
+	}
+}
+a {
+	text-decoration: none;
+}

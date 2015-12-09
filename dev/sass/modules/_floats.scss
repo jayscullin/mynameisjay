@@ -1,0 +1,5 @@
+@mixin float($direction:"left") {
+	display: block;
+	position: relative;
+	float: $direction;
+}

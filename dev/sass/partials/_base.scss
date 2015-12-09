@@ -1,0 +1,36 @@
+@import "vendor/fonts";
+
+// Typography
+$base-font: 'montserrat', sans-serif;
+$thin: 100;
+$regular: 400;
+$bold: 600;
+$base-font-size: .9em;
+$small-font-size: 0.8em;
+$large-font-size: 1.9em;
+$base-line-height: 2rem;
+
+// Color Variables
+$primary-color: #0066cc;
+$secondary-color: #d9ecff;
+$gray: #343434;
+$dark-gray: #222c35;
+$white: #fff;
+
+// Breakpoints
+$breakpoint-phone: 767px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 992px;
+$breakpoint-desktop-xl: 1200px;
+
+// Margins, Padding
+$base-gutter: 25px;
+$large-gutter: 50px;
+$small-gutter: 15px;
+
+// Images
+$base-image-width: 22.5rem;
+$large-image-width: $base-image-width*2;
+$full-image-width: 100%;
+
+@import "modules/all";

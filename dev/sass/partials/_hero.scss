@@ -1,0 +1,55 @@
+#hero {
+	background-color: $primary-color;
+	nav {
+		margin-top: $small-gutter;
+	}
+	#logo {
+		color: $white;
+		height: 40px;
+		line-height: 40px;
+		padding-left: 50px;
+		font-weight: $thin;
+		text-transform: uppercase;
+		font-size: $small-font-size;
+		cursor: default;
+		@include float(left);
+		@include background('../img/logo.svg',left top,40px 40px);
+	}
+	canvas {
+		position: absolute;
+		z-index: 0;
+	}
+	#hero-headline {
+		@include centered();
+		text-align: center;
+		h1 {
+			color: $white;
+			font-size: $large-font-size*2;
+			line-height: $base-line-height*2;
+			margin-bottom: $small-gutter;
+		}
+		h3 {
+			color: $white;
+		}
+	}
+}
+@media(max-width:$breakpoint-phone) {
+	#hero {
+		height: 360px;
+	}
+}
+@media (min-width:$breakpoint-tablet) {
+	#hero {
+		height: 420px;
+	}
+}
+@media (min-width:$breakpoint-desktop) {
+	#hero {
+		height: 560px;
+	}
+}
+@media (min-width:$breakpoint-desktop-xl) {
+	#hero {
+		height: 640px;
+	}
+}
