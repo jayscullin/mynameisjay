@@ -5,40 +5,72 @@
 	border-radius: 1rem;
 	padding: .3rem 1rem .4rem;
 	transition: background-color 400ms ease;
-}
-.primary {
-	@extend .button;
-	color: $secondary-color;
-	background-color: $primary-color;
-}
-.primary:hover {
-	@extend .button;
-	background-color: darken($primary-color, 10%)
-}
-.secondary {
-	@extend .button;
-	color: $primary-color;
-	background-color: $secondary-color;
-}
-.secondary:hover {
-	@extend .button;
-	background-color: darken($secondary-color, 10%)
-}
-.transparent {
-	@extend .button;
-	color: $primary-color;
-	background-color: transparent;
-}
-.transparent:hover {
-	@extend .button;
-	background-color: $secondary-color;
-}
-.inverted {
-	@extend .button;
-	color: $primary-color;
-	background-color: $white;
-}
-.inverted:hover {
-	@extend .button;
-	background-color: darken($white, 10%)
+	img {
+		@include float(left);
+	    max-height: 15px;
+	    margin: 2px 5px 0 0;
+	}
+	&.primary {
+		color: $secondary-color;
+		background-color: $primary-color;
+	}
+	&.primary:hover {
+		background-color: darken($primary-color, 10%)
+	}
+	&.secondary {
+		color: $primary-color;
+		background-color: $secondary-color;
+	}
+	&.secondary:hover {
+		background-color: darken($secondary-color, 10%)
+	}
+	&.transparent {
+		color: $primary-color;
+		background-color: transparent;
+	}
+	&.transparent:hover {
+		background-color: $secondary-color;
+	}
+	&.inverted {
+		color: $primary-color;
+		background-color: $white;
+	}
+	&.inverted:hover {
+		background-color: darken($white, 10%)
+	}
+	&.linkedin {
+		color: $white;
+		background-color: #0274B3;
+	}
+	&.linkedin:hover {
+		background-color: darken(#55ACEE, 10%);
+	}
+	&.twitter {
+		color: $white;
+		background-color: #55ACEE;
+	}
+	&.twitter:hover {
+		background-color: darken(#55ACEE, 10%);
+	}
+	&.facebook {
+		color: $white;
+		background-color: #495FA5;
+	}
+	&.facebook:hover {
+		background-color: darken(#495FA5, 10%);
+	}
+	&.github {
+		color: $white;
+		background-color: #333333;
+	}
+	&.github:hover {
+		background-color: darken(#333333, 10%);
+	}
+
+
+
+	&.disabled {
+		opacity: .5;
+		cursor: default;
+	}
 }

@@ -34,23 +34,21 @@ gulp.task('vendor', function () {
 			'./node_modules/jquery/dist/jquery.js',
 			'./vendor/jquery.particleground.js',
 			'./node_modules/imagesloaded/imagesloaded.pkgd.min.js',
-			'./node_modules/packery/dist/packery.pkgd.min.js',
 			'./node_modules/classnames/index.js',
-			'./node_modules/snapsvg/dist/snap.svg-min.js',
 		])
 		//.pipe(sourcemaps.init())
 		.pipe(concat("vendor.min.js"))
 		//.pipe(uglify())
 		//.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest('./dist/js'))
+		.pipe(gulp.dest('./dist/js'));
 });
 
 // React
 gulp.task('react', function(){
 	del(['./dist/js/main.min.js']);
 	return browserify({
-			entries: './dev/js/main.jsx', 
-			extensions: ['.jsx'], 
+			entries: './dev/js/main.jsx',
+			extensions: ['.jsx'],
 			debug: true,
 			paths: [
 				'./node_modules',
@@ -65,7 +63,7 @@ gulp.task('react', function(){
 		.on('error', handleErrors)
 		.pipe(source('main.min.js'))
 		.pipe(gulp.dest('./dist/js'))
-		.pipe(notify({ 
+		.pipe(notify({
 			title: "Wow just wow",
 			message: "That's a nice fuckin build right there.",
 			icon: path.join(__dirname, "./inc/b.png"),
@@ -88,8 +86,8 @@ gulp.task('fonts', function(){
 
 // Images
 gulp.task('images', function(){
-	del(['./dist/img/*.*']);
-	gulp.src('./dev/img/*.*', { base: './dev/img' })
+	del(['./dist/img']);
+	gulp.src('./dev/img/**/*.*', { base: './dev/img' })
 		.pipe(gulp.dest('./dist/img'))
 });
 

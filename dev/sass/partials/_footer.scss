@@ -1,0 +1,13 @@
+#footer {
+	background-color: $secondary-color;
+	padding: $small-gutter;
+	margin-top: $large-gutter;
+	clear: both;
+	.button {
+		@include float();
+		margin-right: .3rem;
+	}
+	small {
+		margin-top: .4rem;
+	}
+}

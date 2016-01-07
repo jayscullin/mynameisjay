@@ -1,9 +1,23 @@
-img {
+img, .svg-container {
 	display: block;
 	position: relative;
+	&.img-left {
+		max-width: $base-image-width;
+		float: left;
+		margin-right: $large-gutter;
+	}
+	&.img-right {
+		max-width: $base-image-width;
+		float: right;
+		margin-left: $large-gutter;
+	}
+	&.img-center {
+		max-width: $base-image-width;
+		margin: 0 auto;
+	}
 	svg {
 		width: 100%;
-		height: auto;
+		height: auto
 	}
 }
 @media(max-width:$breakpoint-phone) {
@@ -14,21 +28,4 @@ img {
 		float: left;
 		margin: $base-gutter 0;
 	}
-}
-.img-left {
-	@extend img;
-	max-width: $base-image-width;
-	float: left;
-	margin-right: $large-gutter;
-}
-.img-right {
-	max-width: $base-image-width;
-	@extend img;
-	float: right;
-	margin-left: $large-gutter;
-}
-.img-center {
-	max-width: $base-image-width;
-	@extend img;
-	margin: 0 auto;
 }

@@ -1,0 +1,19 @@
+#tags {
+	width: 100%;
+}
+.tag {
+	@include float();
+	color: #7587A6;
+	font-weight: $thin;
+	border: 1px solid $secondary-color;
+	border-radius: .3rem;
+	margin: .3rem .3rem .3rem 0;
+	padding: .3rem 1rem;
+	transition: background-color 300ms ease;
+	&.size-1 {font-size: $base-font-size/1.25}
+	&.size-2 {font-size: $base-font-size/1.5}
+	&.size-3 {font-size: $base-font-size}
+	&.size-4 {font-size: $base-font-size*1.25}
+	&.size-5 {font-size: $base-font-size*1.5}
+	&.size-6 {font-size: $base-font-size*2}
+}

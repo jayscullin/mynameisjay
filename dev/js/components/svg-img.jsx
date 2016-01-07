@@ -1,5 +1,6 @@
 import React from 'react';
 import MixinUtilities from 'mixin-utilities';
+import Snap from 'snapsvg';
 
 const SVGImg = React.createClass({
 	mixins:[MixinUtilities],
@@ -22,7 +23,7 @@ const SVGImg = React.createClass({
 		Snap.load(this.props.src,function(f){
 			s.append(f);
 		});
-		
+
 	},
 	render() {
 

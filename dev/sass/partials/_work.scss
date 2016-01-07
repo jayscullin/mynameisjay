@@ -1,12 +1,33 @@
-
-
+#work {
+	h2 {
+		@include float();
+	}
+}
 #work-toolbar {
 	width: 100%;
 	height: 30px;
-	top: $large-gutter;
-	position: absolute;
 	z-index: 1;
 	.toolbar {
 		@include centeredVertical();
+	}
+}
+@media(max-width:$breakpoint-phone) {
+	#work-toolbar {
+		position: relative;
+		clear: both;
+		margin-bottom: $base-gutter;
+	}
+}
+@media (min-width:$breakpoint-tablet) {
+	#work-toolbar {
+		position: relative;
+		clear: both;
+		margin-bottom: $base-gutter;
+	}
+}
+@media (min-width:$breakpoint-desktop) {
+	#work-toolbar {
+		position: absolute;
+		top: $large-gutter;
 	}
 }

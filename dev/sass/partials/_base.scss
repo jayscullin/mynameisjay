@@ -14,6 +14,7 @@ $base-line-height: 2rem;
 $primary-color: #0066cc;
 $secondary-color: #d9ecff;
 $gray: #343434;
+$light-gray: #343434;
 $dark-gray: #222c35;
 $white: #fff;
 
@@ -32,5 +33,10 @@ $small-gutter: 15px;
 $base-image-width: 22.5rem;
 $large-image-width: $base-image-width*2;
 $full-image-width: 100%;
+
+// Animation
+$base-speed: 300ms;
+$fast-speed: 200ms;
+$slow-speed: 600ms;
 
 @import "modules/all";
