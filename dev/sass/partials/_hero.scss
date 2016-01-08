@@ -20,13 +20,9 @@
 		z-index: 0;
 	}
 	#hero-headline {
-		@include centered();
 		text-align: center;
 		h1 {
 			color: $white;
-			font-size: $large-font-size*2;
-			line-height: $base-line-height*2;
-			margin-bottom: $small-gutter;
 		}
 		h3 {
 			color: $white;
@@ -34,13 +30,40 @@
 	}
 }
 @media(max-width:$breakpoint-phone) {
+	#logo {
+		padding-left: 0;
+		@include centeredVertical();
+	}
 	#hero {
-		height: 360px;
+		height: 240px;
+	}
+	#hero-headline {
+		@include centeredHorizontal();
+		h1 {
+			font-size: $large-font-size;
+			line-height: $base-line-height;
+			margin-bottom: 0;
+			margin-top: $large-gutter;
+		}
+		h3 {
+			font-size: $base-font-size;
+		}
+	}
+	#get-my-resume {
+		display: none !important;
 	}
 }
 @media (min-width:$breakpoint-tablet) {
 	#hero {
 		height: 420px;
+	}
+	#hero-headline {
+		@include centered();
+		h1 {
+			font-size: $large-font-size*2;
+			line-height: $base-line-height*2;
+			margin-bottom: $small-gutter;
+		}
 	}
 }
 @media (min-width:$breakpoint-desktop) {

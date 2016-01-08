@@ -13,7 +13,7 @@ const Work = React.createClass({
 
 						<h2>My Work</h2>
 
-						<a className="github button" href="https://github.com/jayscullin/mynameisjay" target="_blank" className="primary button float-right">Example Code on Github</a>
+						<a id="example-code-on-github" className="github button float-right" href="https://github.com/jayscullin/mynameisjay" target="_blank"><img src="../img/github-icon.png" />Code on Github</a>
 
 						<div id="work-toolbar">
 							<Toolbar />

@@ -17,7 +17,7 @@ const Footer = React.createClass({
 					<a href="https://github.com/jayscullin/mynameisjay" target="_blank" className="github button"><img src="../img/github-icon.png" />Github</a>
 
 					<small className="float-right">
-						Copyright &copy; {this.makeCopyrightYear()} Jay Scullin
+						<a href="mailto:self@mynameisjay.com">Contact Me</a> | Copyright &copy; {this.makeCopyrightYear()} Jay Scullin
 					</small>
 
 				</div>

@@ -8,6 +8,7 @@
 	img {
 		@include float(left);
 	    max-height: 15px;
+	    width: auto;
 	    margin: 2px 5px 0 0;
 	}
 	&.primary {
@@ -66,9 +67,6 @@
 	&.github:hover {
 		background-color: darken(#333333, 10%);
 	}
-
-
-
 	&.disabled {
 		opacity: .5;
 		cursor: default;

@@ -10,11 +10,13 @@ const Tag = React.createClass({
 		};
 	},
 	componentDidMount: function() {
+
+		// Use packery to make a grid of tags
 		var packery = new Packery(document.getElementById('tags'),{
 			itemSelector: '.tag'
 		});
-		packery.bindResize();
-		packery.fit();
+		packery.bindResize(); // Window resize
+		packery.fit(); // Packery type
 	},
 	render() {
 

@@ -16,16 +16,21 @@ const Card = React.createClass({
 		};
 	},
 	makeADescription(){
+
+		/*
+			Construct a string based on passed-in props.
+			Why? I found myself copy/pasting descriptions.
+			This makes it easier to manage.
+		*/
 		var description = "I ";
 		if(this.props.designed) description += " designed";
 		if(this.props.coded) description += " and coded";
 		description += ' this '+this.props.descriptionType+'.';
 		if(this.props.logo) description += " I also designed the logo."
 		return description;
+
 	},
 	render() {
-
-		console.log(this.refs.card)
 
 		var cardStyle = {
 			backgroundImage:"url("+this.props.src+")"

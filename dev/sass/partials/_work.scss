@@ -12,10 +12,9 @@
 	}
 }
 @media(max-width:$breakpoint-phone) {
-	#work-toolbar {
-		position: relative;
-		clear: both;
-		margin-bottom: $base-gutter;
+	#work-toolbar,
+	#example-code-on-github {
+		display: none !important;
 	}
 }
 @media (min-width:$breakpoint-tablet) {

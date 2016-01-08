@@ -15,6 +15,7 @@ const Toolbar = React.createClass({
 	},
 	toggleActive: function(event){
 
+		// Watch the event within the toolbar. Gotta be a button
 		if(event){
 			this.setState({
 				activeButton : event.target.innerHTML,
@@ -22,12 +23,16 @@ const Toolbar = React.createClass({
 			});
 		}
 
+
+		// Loop through buttons and set the active state
 		var buttons = this.refs.toolbar.childNodes;
 
 		for (var i = buttons.length - 1; i >= 0; i--) {
 
+			// Button text == Clicked button text or Button text == Active button state
 			var isActive = (event) ? buttons[i].innerHTML == event.target.innerHTML : buttons[i].innerHTML == this.state.activeButton;
 
+			// Handle classes
 			if(isActive){
 				buttons[i].classList.remove('transparent');
 				buttons[i].classList.add('secondary');
@@ -38,6 +43,7 @@ const Toolbar = React.createClass({
 
 		};
 
+		// Loop through tabs and set the active tab
 		var tabContainers = document.querySelectorAll('.tab-container');
 
 		for (var i = tabContainers.length - 1; i >= 0; i--) {
@@ -46,8 +52,10 @@ const Toolbar = React.createClass({
 
 			for (var j = tabs.length - 1; j >= 0; j--) {
 
+				// Tab ID == Clicked button data-tab attr or Tab ID == Active tab state
 				var isActive = (event) ? tabs[j].id == event.target.getAttribute('data-tab') : tabs[j].id == this.state.activeTab;
 
+				// Handle classes
 				if(isActive){
 					tabs[j].classList.add('active');
 				} else {

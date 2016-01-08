@@ -12,12 +12,15 @@ const SVGImg = React.createClass({
 		};
 	},
 	getInitialState: function() {
+
+		// If there is an id prop, use that otherwise make a unique id
 		return {
 			id:(!this.props.id) ? 'svg-img-'+this.makeId() : this.props.id
 		};
 	},
 	componentDidMount: function() {
 
+		// Use a dead-basic Snap instance and put it in a div
 		var s = Snap('#'+this.refs.SVGImg.id);
 
 		Snap.load(this.props.src,function(f){

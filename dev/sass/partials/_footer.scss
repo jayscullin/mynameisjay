@@ -11,3 +11,15 @@
 		margin-top: .4rem;
 	}
 }
+@media(max-width:$breakpoint-phone) {
+	#footer {
+		.button {
+			width: 100%;
+			margin-top: .4rem;
+		}
+		small {
+			width: 100%;
+			text-align: center;
+		}
+	}
+}

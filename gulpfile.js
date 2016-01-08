@@ -1,5 +1,6 @@
 var autoprefixer = require('autoprefixer');
 var babelify = require('babelify');
+var buffer = require('vinyl-buffer');
 var browserify = require('browserify');
 var concat = require('gulp-concat');
 var del = require('del');
@@ -20,9 +21,8 @@ var watch = require('gulp-watch');
 function handleErrors() {
 	var args = Array.prototype.slice.call(arguments);
 	notify.onError({
-		title: "FFFFFFFUUUUUUUUU!",
+		title: "ERROR!",
 		message: "<%= error.message %>",
-		icon: path.join(__dirname, "./inc/e.png")
 	}).apply(this, args);
 	this.emit('end');
 }
@@ -36,10 +36,10 @@ gulp.task('vendor', function () {
 			'./node_modules/imagesloaded/imagesloaded.pkgd.min.js',
 			'./node_modules/classnames/index.js',
 		])
-		//.pipe(sourcemaps.init())
+		.pipe(sourcemaps.init())
 		.pipe(concat("vendor.min.js"))
-		//.pipe(uglify())
-		//.pipe(sourcemaps.write('./'))
+		.pipe(uglify())
+		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('./dist/js'));
 });
 
@@ -62,11 +62,15 @@ gulp.task('react', function(){
 		.bundle()
 		.on('error', handleErrors)
 		.pipe(source('main.min.js'))
+		.pipe(buffer())
+		.pipe(sourcemaps.init({
+			loadMaps: true
+		}))
+		.pipe(uglify())
+		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('./dist/js'))
 		.pipe(notify({
-			title: "Wow just wow",
-			message: "That's a nice fuckin build right there.",
-			icon: path.join(__dirname, "./inc/b.png"),
+			title: "Build Succeeded.",
 			onLast: true
 		}));
 });

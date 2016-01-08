@@ -57,28 +57,28 @@
 @media (min-width:$breakpoint-tablet) {
 	.card {
 		width: calc(50% - .5rem);
-	}
-	&:nth-child(3n){
-		margin-right: .5rem;
-	}
-	&:nth-child(2n){
-		margin-right: 0;
-	}
-	&:nth-child(1n){
-		margin-left: 0;
+		&:nth-child(3n){
+			margin-right: .5rem;
+		}
+		&:nth-child(2n){
+			margin-right: 0;
+		}
+		&:nth-child(1n){
+			margin-left: 0;
+		}
 	}
 }
 @media (min-width:$breakpoint-desktop) {
 	.card {
 		width: calc(33.33334% - .5rem);
-	}
-	&:nth-child(3n){
-		margin-right: 0;
-	}
-	&:nth-child(2n){
-		margin-right: .5rem;
-	}
-	&:nth-child(1n){
-		margin-left: 0;
+		&:nth-child(3n){
+			margin-right: 0;
+		}
+		&:nth-child(2n){
+			margin-right: .5rem;
+		}
+		&:nth-child(1n){
+			margin-left: 0;
+		}
 	}
 }

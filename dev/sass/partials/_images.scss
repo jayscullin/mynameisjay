@@ -21,7 +21,9 @@ img, .svg-container {
 	}
 }
 @media(max-width:$breakpoint-phone) {
-	img {
+	img,
+	.img-left,
+	.img-right {
 		width: 100%;
 		max-width: 100%;
 		height: auto;
