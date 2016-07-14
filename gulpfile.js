@@ -55,7 +55,7 @@ gulp.task('react', function(){
 				'./dev',
 				'./dev/js',
 				'./dev/js/components',
-				'./dev/js/mixins',
+				'./dev/js/utilities',
 			]
 		})
 		.transform('babelify', {presets: ['es2015', 'react']})

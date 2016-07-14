@@ -5,6 +5,8 @@
 	border-radius: 1rem;
 	padding: .3rem 1rem .4rem;
 	transition: background-color 400ms ease;
+	position: relative;
+	z-index: 2;
 	img {
 		@include float(left);
 	    max-height: 15px;

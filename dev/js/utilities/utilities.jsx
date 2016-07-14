@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MixinUtilities = {
+module.exports = {
 
 	// Generate random id
 	makeId:function(){
@@ -11,5 +11,3 @@ const MixinUtilities = {
 	},
 
 };
-
-module.exports = MixinUtilities;

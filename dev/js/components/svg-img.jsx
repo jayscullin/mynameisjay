@@ -1,9 +1,8 @@
 import React from 'react';
-import MixinUtilities from 'mixin-utilities';
 import Snap from 'snapsvg';
+import util from 'utilities';
 
 const SVGImg = React.createClass({
-	mixins:[MixinUtilities],
 	getDefaultProps: function() {
 		return {
 			src:"",
@@ -15,7 +14,7 @@ const SVGImg = React.createClass({
 
 		// If there is an id prop, use that otherwise make a unique id
 		return {
-			id:(!this.props.id) ? 'svg-img-'+this.makeId() : this.props.id
+			id:(!this.props.id) ? 'svg-img-'+util.makeId() : this.props.id
 		};
 	},
 	componentDidMount: function() {
@@ -30,7 +29,7 @@ const SVGImg = React.createClass({
 	},
 	render() {
 
-		var id = (!this.props.id) ? this.makeId() : this.props.id;
+		var id = (!this.props.id) ? util.makeId() : this.props.id;
 
 		return (
 			<div ref="SVGImg" id={this.state.id} className={"svg-container "+this.props.classes} />

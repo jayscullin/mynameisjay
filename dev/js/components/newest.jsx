@@ -5,7 +5,6 @@ const Newest = React.createClass({
 	render() {
 		return (
 			<div id="newest" className="tab">
-				<Card src="./img/portfolio/logos/maqui-goal.jpg" />
 				<Card
 					src="./img/portfolio/websites/iracing.jpg"
 					name="iRacing (in development)"
@@ -34,7 +33,6 @@ const Newest = React.createClass({
 					disabled
 					buttonText="Under Development"
 				/>
-				<Card src="./img/portfolio/logos/t206.jpg" />
 				<Card
 					src="./img/portfolio/websites/tignj.jpg"
 					name="The Insulation Heating and Cooling Group"
@@ -59,7 +57,6 @@ const Newest = React.createClass({
 					coded
 					logo
 				/>
-				<Card src="./img/portfolio/logos/stratos.jpg" />
 			</div>
 		)
 	}
